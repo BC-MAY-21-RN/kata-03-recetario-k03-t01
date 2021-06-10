@@ -1,9 +1,20 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { Text } from 'react-native';
+import { View } from 'react-native';
+import HorizontalList from '../components/HorizontalList';
+import Search from '../components/Search';
 
 const Home = () => {
-  return <Text> Hello </Text>;
+  return (
+    <>
+      <View>
+        <Search />
+      </View>
+      <View>
+        <HorizontalList />
+      </View>
+    </>
+  )
 };
 
 export default Home;

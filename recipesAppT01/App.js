@@ -8,6 +8,7 @@
  */
 
 import React from 'react';
+import { Text } from 'react-native';
 
 import { SafeAreaView } from 'react-native';
 import Search from './src/components/Search';

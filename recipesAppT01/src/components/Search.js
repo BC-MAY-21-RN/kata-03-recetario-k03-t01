@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
-import { SearchBar } from 'react-native-elements';
+import { TextInput } from 'react-native';
 
 const Search = () => {
 
@@ -9,13 +9,12 @@ const Search = () => {
   const updateSearch = (text) => setSearch(text);
 
   return (
-    <SearchBar
+    <TextInput
       placeholder="What do you want to eat?"
       onChangeText={updateSearch}
-      value={search}
     />
-  )
-}
+  );
+};
 
 export default Search;
 
