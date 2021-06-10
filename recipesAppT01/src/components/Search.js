@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
 import { TextInput } from 'react-native';
+import style from '../../assets/style'
 
 const Search = () => {
 
@@ -9,10 +10,12 @@ const Search = () => {
   const updateSearch = (text) => setSearch(text);
 
   return (
-    <TextInput
-      placeholder="What do you want to eat?"
-      onChangeText={updateSearch}
-    />
+      <TextInput 
+        style={style.searchBar}
+        placeholder="What do you want to eat?"
+        placeholderTextColor= "#ffffff" 
+        onChangeText={updateSearch}
+      />
   );
 };
 

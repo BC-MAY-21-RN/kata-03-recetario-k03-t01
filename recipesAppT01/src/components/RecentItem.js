@@ -1,22 +1,20 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { View, Text, Image } from 'react-native';
+import style from '../../assets/style'
 
-const ListItem = ({ recipe }) => {
+const RecentItem = ({ recipe }) => {
   return (
     <>
       <View>
         <Image
           source={{ uri: recipe.image }}
-          style={{
-            width: 150,
-            height: 150,
-          }}
+          style={style.recentItemImage}
         />
-        <Text>{recipe.title}</Text>
+        <Text style={style.recentItemTitle}>{recipe.title}</Text>
       </View>
     </>
   );
 };
 
-export default ListItem;
+export default RecentItem;
