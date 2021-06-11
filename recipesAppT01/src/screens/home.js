@@ -11,9 +11,10 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 const Home = () => {
   return (
     <SafeAreaView style={style.home}>
-      <View>
-        {/* <Icon name="rocket" size={30} color="#900">P</Icon> */}
+      <View style={style.searchSection}>
+        <Icon style = {style.searchIcon} name="search"/>
         <Search />
+        <Icon style = {style.searchIcon} name="microphone"/>
       </View>
       <View>
         <TrendingList />

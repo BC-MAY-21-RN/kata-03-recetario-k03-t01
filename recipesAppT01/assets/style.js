@@ -1,16 +1,34 @@
+/* eslint-disable prettier/prettier */
 import { StyleSheet } from 'react-native'
 
 const style = StyleSheet.create({
     home: {
         flex: 1,
         backgroundColor: '#363636',
-
+    },
+    searchSection: {
+        flex: 0,
+        flexDirection: 'row',
+        margin: 20,
+        borderRadius: 4,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#5e5e5e',
+    },
+    searchIcon: {
+        fontSize: 18,
+        color: 'white',
+        padding: 10,
     },
     searchBar: {
-        margin: 10,
-        fontSize: 14,
+        flex: 1,
+        paddingTop: 10,
+        paddingRight: 10,
+        paddingBottom: 10,
+        paddingLeft: 0,
+        fontSize: 16,
         color: 'white',
-        backgroundColor: '#5e5e5e',
+        // backgroundColor: '#5e5e5e',
         borderRadius: 4,
     },
     listTitle: {
