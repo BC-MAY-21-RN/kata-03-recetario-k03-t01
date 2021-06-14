@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { View, Text, Image } from 'react-native';
-import style from '../../assets/style'
+import style from '../../assets/style';
 
 const RecentItem = ({ recipe }) => {
   return (

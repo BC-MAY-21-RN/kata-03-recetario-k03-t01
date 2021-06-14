@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native';
 
 const style = StyleSheet.create({
     home: {
@@ -52,10 +52,14 @@ const style = StyleSheet.create({
     trendingItemTitle: {
         color: 'white',
         fontSize: 14,
+        maxWidth: 110,
+        marginLeft: 12,
     },
     recentItemTitle: {
         color: 'white',
         fontSize: 18,
+        maxWidth: 150,
+        marginLeft: 12,
     },
 });
 
