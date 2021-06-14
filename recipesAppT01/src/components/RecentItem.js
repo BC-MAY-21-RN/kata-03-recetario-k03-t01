@@ -1,18 +1,21 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { Text, Image, TouchableOpacity } from 'react-native';
 import style from '../../assets/style';
 
-const RecentItem = ({ recipe }) => {
+const RecentItem = ({ recipe, navigation }) => {
+
   return (
     <>
-      <View>
+      <TouchableOpacity
+      onPress={() => navigation.navigate('Details',{recipe})}
+      >
         <Image
           source={{ uri: recipe.image }}
           style={style.recentItemImage}
         />
         <Text style={style.recentItemTitle}>{recipe.title}</Text>
-      </View>
+      </TouchableOpacity>
     </>
   );
 };

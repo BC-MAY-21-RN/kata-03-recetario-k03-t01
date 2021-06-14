@@ -6,7 +6,7 @@ import RecentItem from './RecentItem';
 import { recipes } from '../../assets/recipes.json';
 import style from '../../assets/style';
 
-const RecentList = () => {
+const RecentList = ({navigation}) => {
 
   const { recent } = recipes;
 
@@ -15,7 +15,7 @@ const RecentList = () => {
       <Text style={style.listTitle}>RECENT</Text>
       <FlatList
         data={recent}
-        renderItem={({ item }) => <RecentItem recipe={item} />}
+        renderItem={({ item }) => <RecentItem recipe={item} navigation={navigation}/>}
         keyExtractor={(item) => item.id}
         horizontal
       />

@@ -61,6 +61,79 @@ const style = StyleSheet.create({
         maxWidth: 150,
         marginLeft: 12,
     },
+    // DETAILS VIEW
+    containerTop: {
+        flex: 1,
+        flexDirection: 'column',
+    },
+    containerBottom: {
+        flex: 1,
+        backgroundColor: '#363636',
+        paddingHorizontal: 20,
+        paddingTop: 30,
+        paddingBottom: 20,
+    },
+    imageBackground: {
+        flex: 1,
+        resizeMode: 'contain',
+        justifyContent: 'center',
+    },
+    textsContainer: {
+        textAlign: 'center',
+        justifyContent: 'space-between',
+        flex: 1,
+        backgroundColor: '#000000a1',
+    },
+    iconsContainer: {
+        flexDirection: 'row',
+        marginTop: 40,
+    },
+    topIcon: {
+        color: 'white',
+        fontSize: 34,
+        marginLeft: 20,
+    },
+    rightIcons: {
+        marginRight: 30,
+        marginLeft: 'auto',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    textsBottom: {
+        marginHorizontal: 30,
+        marginBottom: 50,
+    },
+    textRecipeSection: {
+        textTransform: 'uppercase',
+        color: 'white',
+        fontSize: 20,
+    },
+      textRecipeName: {
+        color: 'white',
+        fontSize: 26,
+    },
+    containerIngredient: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        borderBottomColor: '#969696',
+        borderBottomWidth: 1,
+        marginBottom: 10,
+    },
+    textIngredients: {
+        color: 'white',
+        maxWidth: 130,
+        fontSize: 20,
+        marginBottom: 20,
+        lineHeight: 30,
+    },
+    textIngredient: {
+        color: 'white',
+        fontSize: 16,
+        marginBottom: 10,
+        lineHeight: 30,
+        maxWidth: 300,
+    },
 });
 
 export default style;

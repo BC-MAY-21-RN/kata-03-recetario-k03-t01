@@ -5,7 +5,7 @@ import TrendingItem from './TrendingItem';
 import { recipes } from '../../assets/recipes.json';
 import style from '../../assets/style';
 
-const TrendingList = () => {
+const TrendingList = ({navigation}) => {
 
   const { trending } = recipes;
 
@@ -14,7 +14,7 @@ const TrendingList = () => {
       <Text style={style.listTitle}>TRENDING</Text>
       <FlatList
         data={trending}
-        renderItem={({ item }) => <TrendingItem recipe={item} />}
+        renderItem={({ item }) => <TrendingItem recipe={item} navigation={navigation}/>}
         keyExtractor={(item) => item.id}
         horizontal
       />

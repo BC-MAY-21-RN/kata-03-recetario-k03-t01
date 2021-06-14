@@ -8,7 +8,8 @@ import style from '../../assets/style';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
-const Home = () => {
+const Home = function({ navigation }) {
+
   return (
     <SafeAreaView style={style.home}>
       <View style={style.searchSection}>
@@ -17,8 +18,8 @@ const Home = () => {
         <Icon style={style.searchIcon} name="microphone" />
       </View>
       <View>
-        <TrendingList />
-        <RecentList />
+        <TrendingList navigation={navigation}/>
+        <RecentList navigation={navigation}/>
       </View>
     </SafeAreaView>
   );

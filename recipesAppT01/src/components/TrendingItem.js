@@ -1,18 +1,20 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { Text, Image, TouchableOpacity } from 'react-native';
 import style from '../../assets/style'
 
-const TrendingItem = ({ recipe }) => {
+const TrendingItem = ({ recipe, navigation }) => {
   return (
     <>
-      <View>
+      <TouchableOpacity
+      onPress={() => navigation.navigate('Details',{recipe})}
+      >
         <Image
           source={{ uri: recipe.image }}
           style={style.trendingItemImage}
         />
         <Text style={style.trendingItemTitle}>{recipe.title}</Text>
-      </View>
+      </TouchableOpacity>
     </>
   );
 };

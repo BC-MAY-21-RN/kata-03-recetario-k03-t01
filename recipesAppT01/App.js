@@ -8,18 +8,22 @@
  */
 
 import React from 'react';
-import { Text } from 'react-native';
-
-import { SafeAreaView } from 'react-native';
-import Search from './src/components/Search';
-
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import Home from './src/screens/home';
+import Details from './src/screens/details';
+
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <>
-      <Home />
-    </>
+    <NavigationContainer>
+      <Stack.Navigator  screenOptions={{header: () => null}}>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Details" component={Details} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
