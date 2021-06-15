@@ -7,7 +7,8 @@ import style from '../../assets/style';
 
 const TrendingList = ({navigation}) => {
 
-  const { trending } = recipes;
+  const  trending  = recipes.filter(recipe => recipe.section === 'trending');
+
 
   return (
     <View>

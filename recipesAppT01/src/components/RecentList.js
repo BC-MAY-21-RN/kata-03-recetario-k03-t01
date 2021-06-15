@@ -8,7 +8,7 @@ import style from '../../assets/style';
 
 const RecentList = ({navigation}) => {
 
-  const { recent } = recipes;
+  const  recent  = recipes.filter(recipe => recipe.section === 'recent');
 
   return (
     <View>

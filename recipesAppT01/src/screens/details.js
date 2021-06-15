@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
+import { useState } from 'react';
 import {SafeAreaView, View, Text, ImageBackground, FlatList} from 'react-native';
-// import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import style from '../../assets/style';
 
@@ -14,22 +14,25 @@ const Ingredient = ({ ingredient, size }) => {
     );
   };
 
-const details = function({ route, navigation }) {
+const Details = function({ route, navigation }) {
 
-    console.log(route.params);
-    console.log(route.params.recipe.id);
+    const [liked, setLiked] = useState(false);
+
+
     return (
         <SafeAreaView style={style.containerTop}>
             <ImageBackground source={{uri: route.params.recipe.image}} style={style.imageBackground}>
                 <View style={style.textsContainer}>
                     <View style={style.iconsContainer}>
-                        <Icon style={style.topIcon} name="close" />
+                        <Icon style={style.topIcon} name="close" onPress={() => navigation.goBack()} />
                         <View style={style.rightIcons}>
                             <Icon style={style.topIcon} name="ios-share" />
-                            <Icon style={style.topIcon} name="favorite-border" />
+                            <Icon style={style.topIcon} name={liked ? "favorite" : "favorite-border"}
+                                onPress={()=> setLiked(!liked)} />
                         </View>
                     </View>
                     <View style={style.textsBottom}>
+                        <Text style={style.textRecipeSection}>{route.params.recipe.section}</Text>
                         <Text style={style.textRecipeName}>{route.params.recipe.title}</Text>
                     </View>
                 </View>
@@ -39,11 +42,11 @@ const details = function({ route, navigation }) {
                 <FlatList
                     data={route.params.recipe.ingredients}
                     renderItem={({ item }) => <Ingredient {...item} />}
-                    keyExtractor={(item) => item.id}
+                    keyExtractor={(item,index) => index.toString()}
                 />
             </View>
         </SafeAreaView>
     );
 };
 
-export default details;
+export default Details;
