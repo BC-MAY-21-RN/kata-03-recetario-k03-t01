@@ -28,34 +28,33 @@ const style = StyleSheet.create({
         paddingLeft: 0,
         fontSize: 16,
         color: 'white',
-        // backgroundColor: '#5e5e5e',
         borderRadius: 4,
     },
     listTitle: {
         marginLeft: 10,
         marginTop: 60,
-        fontSize: 18,
+        fontSize: 24,
         color: '#f40083',
     },
-    recentItemImage: {
+    bigImage: {
         width: 150,
         height: 200,
         borderRadius: 10,
         margin: 10,
     },
-    trendingItemImage: {
+    smallImage: {
         width: 110,
         height: 110,
         borderRadius: 10,
         margin: 10,
     },
-    trendingItemTitle: {
+    smallTitle: {
         color: 'white',
         fontSize: 14,
         maxWidth: 110,
         marginLeft: 12,
     },
-    recentItemTitle: {
+    bigTitle: {
         color: 'white',
         fontSize: 18,
         maxWidth: 150,
