@@ -18,7 +18,6 @@ const Details = function({ route, navigation }) {
 
     const [liked, setLiked] = useState(false);
 
-
     return (
         <SafeAreaView style={style.containerTop}>
             <ImageBackground source={{uri: route.params.recipe.image}} style={style.imageBackground}>

@@ -3,7 +3,6 @@ import React from 'react';
 import { SafeAreaView, View } from 'react-native';
 import RecipeList from '../components/RecipeList';
 import Search from '../components/Search';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import style from '../../assets/style';
 import { recipes } from '../../assets/recipes.json';
 
@@ -14,11 +13,7 @@ const Home = function({ navigation }) {
 
   return (
     <SafeAreaView style={style.home}>
-      <View style={style.searchSection}>
-        <Icon style={style.searchIcon} name="search" />
-        <Search />
-        <Icon style={style.searchIcon} name="microphone" />
-      </View>
+      <Search/>
       <View>
         <RecipeList
           navigation={navigation}

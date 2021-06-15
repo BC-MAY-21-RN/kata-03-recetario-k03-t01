@@ -6,17 +6,19 @@ const style = StyleSheet.create({
         flex: 1,
         backgroundColor: '#363636',
     },
+    // SEARCH SECTION
     searchSection: {
         flex: 0,
         flexDirection: 'row',
-        margin: 20,
-        borderRadius: 4,
+        marginTop: 30,
+        marginHorizontal: 20,
+        borderRadius: 16,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#5e5e5e',
     },
     searchIcon: {
-        fontSize: 18,
+        fontSize: 24,
         color: 'white',
         padding: 10,
     },
@@ -26,10 +28,11 @@ const style = StyleSheet.create({
         paddingRight: 10,
         paddingBottom: 10,
         paddingLeft: 0,
-        fontSize: 16,
+        fontSize: 18,
         color: 'white',
         borderRadius: 4,
     },
+    // LIST
     listTitle: {
         marginLeft: 10,
         marginTop: 60,
